@@ -1,0 +1,21 @@
+:root {
+    --ftt-primary: #E24A1D;
+    --ftt-secondary: #F1DFBB;
+    --ftt-tertiary: #873F12;
+    --ftt-gradient: ;
+    --ftt-error: #E32C11;
+    --ftt-black-100: #220B04;
+    --ftt-black-75: #52413C;
+    --ftt-black-50: #827673;
+    --ftt-black-25: #B3ADAC;
+}
+
+
+// util classes
+.f-light{
+    color: var(--ftt-secondary);
+}
+.f-dark{
+    color: var(--ftt-black-100);
+}
+
