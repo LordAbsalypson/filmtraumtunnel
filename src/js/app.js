@@ -9,14 +9,14 @@
           },
       
         // If we need pagination
-        pagination: {
+/*        pagination: {
           el: '.swiper-pagination',
-        },
+        },*/
       
         // Navigation arrows
         navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
+          nextEl: '.button-next',
+          prevEl: '.button-prev',
         },
     
       });

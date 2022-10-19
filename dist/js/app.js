@@ -1,1 +1,1 @@
-const swiper=new Swiper(".swiper",{loop:!0,grabCursor:!0,autoplay:{delay:4e3,disableOnInteraction:!0},pagination:{el:".swiper-pagination"},navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"}});
+const swiper=new Swiper(".swiper",{loop:!0,grabCursor:!0,autoplay:{delay:4e3,disableOnInteraction:!0},navigation:{nextEl:".button-next",prevEl:".button-prev"}});

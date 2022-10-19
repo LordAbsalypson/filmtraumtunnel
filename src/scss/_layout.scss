@@ -1,3 +1,17 @@
+header{
+    .section--nav{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 10% 50% 10%;
+        margin: 3rem 15% 0 15%;
+        .nav--menu{
+            display: flex;
+            justify-content: space-evenly;
+            gap: 2rem;
+        }
+    }
+}
+
 body{
     .wrapper{
         display: grid;
