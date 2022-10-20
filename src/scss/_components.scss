@@ -18,6 +18,9 @@ button {
     box-shadow: 0 0 25px var(--ftt-primary);
     background: var(--ftt-primary);
   }
+  &:hover{
+    transform: scale(105%);
+  }
 }
 
 section {
