@@ -13,6 +13,7 @@ body {
 
 header {
   .section--nav {
+
     .nav--logo {
       margin-top: -3rem;
       background: var(--ftt-primary);
@@ -44,6 +45,21 @@ header {
 
         }
       }
+    }
+    &.desktop{
+      display: grid;
+      @media screen and (max-width: 800px) {
+        display: none;
+    }
+
+    }
+    &.mobil{
+      display: none;
+      @media screen and (max-width: 800px) {
+        display: grid;
+        background: #000;
+    }
+
     }
   }
 }
@@ -225,47 +241,40 @@ footer {
 
     a {
       font-size: 1.5rem;
-
       &:before {
         content: "* ";
 
       }
     }
   }
-
-  .footer--col-2 {
-    .social-media--channels {
+  .footer--col-2{
+    .social-media--channels{
       display: flex;
       gap: 1rem;
-
-      a {
+      a{
         aspect-ratio: 1;
         height: 5rem;
         border-radius: .8rem;
         display: flex;
         justify-content: center;
         align-items: center;
-
-        &:hover {
-          path {
+        &:hover{
+          path{
             fill: var(--ftt-primary);
           }
         }
       }
     }
   }
-
   .footer--col-3 {
     display: grid;
     padding: 3.5rem 4rem 0 4rem;
     gap: 2rem;
-
     button {
       &:nth-of-type(1) {
         border: .2rem solid var(--ftt-primary);
         background: var(--ftt-primary);
-
-        &:hover {
+        &:hover{
           background: var(--ftt-black-100);
           border-color: var(--ftt-black-100);
         }
@@ -275,8 +284,7 @@ footer {
         border: .2rem solid var(--ftt-primary);
         background: var(--ftt-secondary);
         color: var(--ftt-primary);
-
-        &:hover {
+        &:hover{
           background: var(--ftt-tertiary);
           border-color: var(--ftt-tertiary);
           color: var(--ftt-secondary);
