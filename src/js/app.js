@@ -1,4 +1,4 @@
-    // init Swiper:
+        // init Swiper:
     const swiper = new Swiper ('.swiper', {
         // Optional parameters
         loop: true,
@@ -38,3 +38,36 @@
             }
         });
     };
+
+    // lottie
+LottieInteractivity.create({
+  player: "#burgerMenu",
+  mode:"cursor",
+  speed:"1.4",
+  direction:-1,
+  actions: [
+      {
+          type: "toggle",
+      }
+  ]
+});
+
+// nav
+const burgerMenu = document.querySelector("#burgerMenu");
+
+burgerMenu.addEventListener("click", function(){
+  let navOpen = document.querySelector('.section--nav.mobil');
+  if (navOpen.classList.contains('openNav')) {
+    navOpen.classList.remove('openNav')
+
+  }
+  else {
+    navOpen.classList.add('openNav');
+  }
+
+});
+
+
+  
+   
+  

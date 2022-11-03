@@ -55,12 +55,72 @@ header {
     }
     &.mobil{
       display: none;
+
       @media screen and (max-width: 800px) {
+   
         display: grid;
-        background: #000;
+        position: fixed;
+        align-items: center;
+        grid-template-columns: 25% 50% 25%;
+        grid-template-rows: 20% 50%;
+        max-width: 80%;
+        left: 10%;
+        right: 10%;
+        top: 0;
+        z-index: 101;
+
+        .nav--open{
+          opacity: 0;
+        }
+
+        &.openNav{
+          opacity: 1;
+          z-index: 90;
+          
+          position: fixed;
+          background: var(--ftt-primary);
+
+          width: 100vw;
+          height: 100vh;
+          inset: 0;
+
+          .nav--open{
+          opacity: 1  ;
+          justify-content: center;
+          grid-column: -3 / -2;
+          .nav--menu{
+            flex-direction: column;
+            align-items: center;
+          }
+          }
+        }
+
+
+
+        .nav--logo{
+          background: transparent;
+          display: flex;
+          align-items: center;
+          width: 80%;
+        }
+        p{
+          font-size: 4rem;
+          font-weight: 100;
+          text-align: center;
+        }
+        .nav--burger-menu{
+          width: clamp(4rem, 100%, 8rem);
+          cursor: pointer;
+        }
+
+
+        
     }
 
     }
+  }
+  @media screen and (max-width: 800px) {
+  margin-top: 10rem;
   }
 }
 
