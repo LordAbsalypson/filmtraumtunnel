@@ -43,7 +43,7 @@
 LottieInteractivity.create({
   player: "#burgerMenu",
   mode:"cursor",
-  speed:"1.4",
+  speed:1,
   direction:-1,
   actions: [
       {
@@ -57,13 +57,7 @@ const burgerMenu = document.querySelector("#burgerMenu");
 
 burgerMenu.addEventListener("click", function(){
   let navOpen = document.querySelector('.section--nav.mobil');
-  if (navOpen.classList.contains('openNav')) {
-    navOpen.classList.remove('openNav')
-
-  }
-  else {
-    navOpen.classList.add('openNav');
-  }
+  navOpen.classList.toggle('nav-is-open')
 
 });
 
