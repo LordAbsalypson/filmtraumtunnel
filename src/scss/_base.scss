@@ -78,37 +78,39 @@ header {
         position: relative;
           .nav--controls {
             margin-top: 2rem;
-            display: flex;
             position: fixed;
             align-items: center;
-            
-            
+            margin-inline: auto;
             left: 50%;
-            right: 50%;
+            translate: -50% 0;
+            gap: 1rem;
             top: 0;
             z-index: 101;
+            width: min(100%, 60rem);
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
 
             .nav--logo{
-              align-items: center;
-              width: clamp(10rem, 15rem, 50%);
+              width: 10rem;
               aspect-ratio: 1/1;
               display: flex;
-              justify-content: center;
-              align-items: center;
+              justify-self: right;
+              padding-right: 1rem;
+              justify-content: flex-end;
               img{
                 aspect-ratio: 1/1;
                 width: inherit;
+                width: min(70%, 9rem);
               }
             }
-            p{
-              font-size: 4rem;
-              font-weight: 100;
-              text-align: center;
+            .headline{
+              fill: var(--ftt-secondary);
               margin: 0;
               text-shadow: 0 0 25px var(--ftt-black-100);
+              width: 100%;
             }
             .nav--burger-menu{
-              width: clamp(4rem, 100%, 8rem);
+              width: clamp(3rem, 100%, 5rem);
               cursor: pointer;
               background: var(--ftt-black-100);
               border-radius: 50%;
@@ -116,8 +118,9 @@ header {
             }
           }
           .nav--menu{
+            display: flex;
             opacity: 0;
-            margin-top: 15rem;
+            margin-top: 5rem;
             flex-direction: column;
             align-items: center;
             position: absolute;
@@ -177,30 +180,16 @@ header {
 
 .section--intro {
   position: relative;
-
-  .swiper {
-    width: 150rem;
-    height: 100rem;
-
-    .swiper-wrapper {
-      .swiper-slide {
-        background: url(/src/assets/svg/bg-cricle-svg.svg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
-
-        .swiper-slide--container {
-          display: flex;
-          width: 100%;
-          height: 100%;
-          gap: 2rem;
-          justify-content: center;
-          align-items: center;
-
-          .swiper-slide--headline {
-            text-align: center;
-          }
-        }
+  margin-top: 10rem;
+  .intro--container{
+    .intro--container-slide{
+      width: 100%;
+      margin: 0 auto;
+      .slide--content{
+        background: var(--ftt-secondary);
+        border-radius: 5rem;
+        display: flex;
+        padding: 2rem;
       }
     }
   }

@@ -37,17 +37,19 @@ html {
     html{
       width: 100vw;
       overflow-x: hidden;
-    }
-body{
-
-    .wrapper{
-      width: clamp(320px, 80vw, 80rem);
-      margin: 0 auto;
-      > * {
-        width: 100%;
+      
+      body{
+      
+          .wrapper{
+            width: clamp(320px, 80vw, 80rem);
+            margin: 0 auto;
+            > * {
+              width: 100%;
+            }
+      
+          }
       }
     }
-}
 
 }
 
