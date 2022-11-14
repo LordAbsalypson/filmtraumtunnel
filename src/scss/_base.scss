@@ -28,11 +28,14 @@ header {
 
         .nav--logo {
           margin-top: -3rem;
-          padding-top: 3rem;
+          padding-top: 1rem;
           background: var(--ftt-primary);
           width: clamp(10rem, 15rem, 100%);
+          animation: pulsatingLogo 5s ease infinite;
 
-        }
+          }
+
+        
         .nav--menu {
           display: flex;
           justify-content: space-evenly;
@@ -45,12 +48,12 @@ header {
             .headline {
               margin: 0 1rem;
               font-size: clamp(1.5rem, 3.5rem, 5rem);
-             
+              text-shadow: 0 0 15px black;
               
               &.active {
                 color: var(--ftt-secondary);
                 border-bottom: .2rem solid var(--ftt-secondary);
-                text-shadow: 0 0 25px var(--ftt-secondary);
+                text-shadow: 0 0 30px var(--ftt-primary), 0 0 15px rgba(0, 0, 0, 0.7);
               }
               
               &:hover {
@@ -60,7 +63,10 @@ header {
             }
           }
     
-          .nav--login {
+        }
+        .nav--login {
+          .light{
+            box-shadow: 0 0 15px black;
 
           }
         }
@@ -106,7 +112,7 @@ header {
             .headline{
               fill: var(--ftt-secondary);
               margin: 0;
-              text-shadow: 0 0 25px var(--ftt-black-100);
+              filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 1));
               width: 100%;
             }
             .nav--burger-menu{
@@ -160,18 +166,7 @@ header {
         }
       }
     }
-  @keyframes fadeIn {
-    from{
-      background: transparent;
-      height: 0;
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-      height: 100%;
-      background: var(--ftt-primary);
-    }
-  }
+
 
   @media screen and (max-width: 800px) {
   margin-top: 10rem;
@@ -205,7 +200,7 @@ header {
     align-items: center;
 
     .free-trial--text {
-      max-width: 70%;
+      max-width: 60%;
       padding: 2rem 0 2rem 1rem;;
 
       p {
@@ -230,11 +225,18 @@ header {
 .section--monthly-selection {
   h2 {
     text-align: center;
+    &::after{
+      content: "Dezember22";
+      font-family: ff-nexus-typewriter;
+      font-size: 2rem;
+      font-style: italic;
+      padding-left: 2rem;
+    }
   }
 
   .monthly-selection--selection-preview {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 350px));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 300px));
     justify-content: center;
     gap: 8rem;
 
@@ -319,6 +321,30 @@ header {
 
     p {
       width: 70%;
+    }
+  }
+}
+.section--about-info{
+  .slide--container{
+    background: var(--ftt-tertiary);
+    border-radius: 1rem;
+    
+    .slide--content{
+      padding: 2rem 1.5rem 4rem 1.5rem;
+      div{
+        padding: 0 20rem;
+        display: flex;
+        gap: 3rem;
+        img{
+          max-width: 300px;
+        }
+        p{
+
+        }
+      }
+      h2{
+        padding: 0 15rem;
+      }
     }
   }
 }
