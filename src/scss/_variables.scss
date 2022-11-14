@@ -8,6 +8,14 @@
     --ftt-black-75: #52413C;
     --ftt-black-50: #827673;
     --ftt-black-25: #B3ADAC;
+    // font sizes
+    --font-size-sm: clamp(1.28rem, 0.17vw + 1.21rem, 1.43rem);
+    --font-size-base: clamp(1.6rem, 0.34vw + 1.46rem, 1.9rem);
+    --font-size-md: clamp(2rem, 0.61vw + 1.76rem, 2.53rem);
+    --font-size-lg: clamp(2.5rem, 1vw + 2.1rem, 3.38rem);
+    --font-size-xl: clamp(3.13rem, 1.56vw + 2.5rem, 4.5rem);
+    --font-size-xxl: clamp(3.91rem, 2.38vw + 2.96rem, 6rem);
+    --font-size-xxxl: clamp(4.88rem, 3.54vw + 3.47rem, 8rem);
 }
 
 

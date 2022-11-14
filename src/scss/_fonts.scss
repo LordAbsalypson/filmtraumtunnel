@@ -1,3 +1,4 @@
+
 @import url("https://use.typekit.net/dzr7kjc.css");
 @import url("https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css");
 
@@ -11,20 +12,20 @@ h1, h2, h3, h4, h5, h6, .headline {
     font-style: normal;
 }
 p{
-    font-size: 1rem;
+    font-size: var(--font-size-base);
 }
 h1 {
     margin-top: 0;
-    font-size: 5.653rem;
+    font-size: var(--font-size-xxl);
   }
   
-  h2 {font-size: 3.998rem;}
+  h2 {font-size: var(--font-size-xl)}
   
-  h3 {font-size: 2.827rem;}
+  h3 {font-size: var(--font-size-lg);}
   
-  h4 {font-size: 1.999rem;}
+  h4 {font-size: var(--font-size-md);}
   
-  h5 {font-size: 1.414rem;}
+  h5 {font-size: var(--font-size-base);}
 
 p, ul, li, b, i, .text, a {
     font-family: ff-nexus-typewriter, sans-serif;
@@ -40,6 +41,6 @@ font-style: italic;
 }
 
 button{
-  font-family: filmotype-maxwell;
-  font-size: 2rem;
+  font-family: filmotype-maxwell, sans-serif;
+  font-size: var( --font-size-md);
 }
