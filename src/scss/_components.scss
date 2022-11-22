@@ -13,16 +13,17 @@ button {
     box-shadow: 0 0 25px var(--ftt-primary);
     background: var(--ftt-primary);
   }
+
   &.light:hover {
     color: var(--ftt-secondary);
     box-shadow: 0 0 25px var(--ftt-primary);
     background: var(--ftt-primary);
   }
-  &:hover{
+
+  &:hover {
     transform: scale(105%);
   }
 }
-
 
 
 .intro--container-slide {
@@ -39,7 +40,7 @@ button {
       height: 100%;
     }
   }
-  
+
 
   .slide--content {
     display: flex;
