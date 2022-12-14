@@ -10,6 +10,11 @@ html {
 body {
   background: var(--ftt-black-100);
   position: relative;
+
+  &.nav-open {
+    position: fixed;
+    overflow: hidden;
+  }
 }
 
 
@@ -219,6 +224,16 @@ header {
         }
       }
     }
+    @media  only screen and  (max-width:800px) {
+      .free-trial--text, .free-trial--cta{
+        p, button{
+          font-size: 2rem;
+        }
+      }
+      .free-trial--arrow{
+        display: none;
+      }
+    }
   }
 }
 
@@ -299,13 +314,21 @@ header {
   .selection--cta {
     margin-top: 2rem;
     text-align: center;
+    > * {
+      margin: 0 2%;
+    }
+  }
+  @media only screen and (max-width:800px){
+    .selection--cta{
+      display: grid;
+      margin: 2rem auto 0;
+      width: 70%;
+      gap: 2rem;
+    }
   }
 }
 
 .section--streaming-info {
-  // background: url("/src/assets/svg/streaming-info_bg-svg.svg") no-repeat center;
-  // background-size: 110%;
-  // background-position-x: -25rem;
   position: relative;
   margin: 10rem -20rem 0 -20rem !important;
   padding: 10rem 20rem 10rem 20rem !important;
@@ -340,6 +363,19 @@ header {
       // width: 100%;
       object-fit: contain;
       object-position: center;
+    }
+  }
+  @media only screen and (max-width:800px) {
+    display: flex;
+    flex-direction: column  ;
+    .streaming-info--text{
+      &>*{
+        margin: 2rem 0;
+      }
+      text-align: center;
+      p{
+        width: 100%;
+      }
     }
   }
 }
@@ -445,6 +481,26 @@ footer {
 
     p {
       font-size: 1.2rem;
+    }
+  }
+  @media only screen and (max-width:800px){
+    .footer-top{
+     
+      .footer--content{
+        padding: 5% 20% 2% 20%;
+        grid-template-columns: 1fr;
+        h3{
+          margin-bottom: 1rem;
+        }
+        .footer--col-1{
+        }
+        .social-media--channels{
+          justify-content: space-around;
+        }
+        .footer--col-3{
+          padding: 3.5rem 0;
+        }
+      }
     }
   }
 }

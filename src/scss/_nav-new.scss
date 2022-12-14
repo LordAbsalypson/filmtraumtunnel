@@ -1,13 +1,17 @@
 .navbar {
-    --navbar-height: 200px;
+    --navbar-height: 160px;
     position: fixed;
     top: 0;
     left: var(--left);
     z-index: 999;
     height: var(--navbar-height);
+    &.scrolled{
+        top: -180px;
+    }
     &-wrapper {
         display: flex;
-        justify-content: space-between;
+        // gap: 5%;
+        // justify-content: space-between;
         height: 100%;
 
         > * {
@@ -18,8 +22,12 @@
     &-brand {
         width: fit-content !important;
         height: 100%;
+        margin-right: 5%;
+        animation: pulsatingLogo 5s ease infinite;
+
         img {
             height: 100%;
+            
         }
     }
 
@@ -39,7 +47,8 @@
 
 
     &-menu {
-        width: fit-content !important;
+        width: unset !important;
+        flex-grow: 1;
         @media only screen and (min-width: 801px) {
             padding-top: 4rem;
         }
@@ -48,7 +57,7 @@
     &-list {
         display: flex;
         align-items: center;
-        gap: 3.5rem;
+        justify-content: space-between;
         margin: 0;
         padding: 0;
         list-style: none;
@@ -74,17 +83,41 @@
     }
 
     @media only screen and (max-width: 800px) {
-        --navbar-height: 100px;
-        top: 2rem;
+        --navbar-height: 70px;
+        top: 3.5rem;
+
+        left: calc(var(--left) - 2.5px);
         
         &-wrapper {
+            gap: 5%;
             align-items: center;
+            justify-content: center;
             isolation: isolate;
+
+            &:after{
+                background: black;
+                content: "";
+                position: absolute;
+                inset: 0;
+                z-index: -1;
+                border-radius: 11rem;
+                WIDTH: 80%;
+                margin: 0 auto;
+                height: 90%;
+                top: 50%;
+                left: 5%;
+                translate: 0 -50%;
+            }
         }
 
-        &-brand img {
+        &-brand {
             border-radius: 50%;
+            margin: 0;
+            img {
+                border-radius: 50%;
+            }
         }
+        
         
         &-wortmarke, &-toggler {
             display: block;
@@ -92,7 +125,20 @@
 
         &-list {
             flex-direction: column;
-            padding-top: 18rem;
+            padding-top: 15rem;
+            gap: 1rem;
+        }
+        &-link{
+            text-shadow: none;
+            &:hover {
+                color: var(--ftt-black);
+                border-bottom: none;
+            }
+            &.active{
+                color: var(--ftt-black);
+                border-bottom: 1px solid var(--ftt-black);
+
+            }
         }
 
         &-menu {

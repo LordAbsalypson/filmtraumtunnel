@@ -29,7 +29,7 @@ html {
         section{
           margin: 8rem 0;
           &:nth-child(1){
-            // margin-top: 20rem;
+            margin-top: 12rem;
           }
         }
       }
@@ -50,16 +50,25 @@ html {
       overflow-x: hidden;
       
       body{
-      
+        
           .wrapper{
             width: clamp(320px, 80vw, 80rem);
             margin: 0 auto;
             > * {
               width: 100%;
-            }
-      
+            }      
           }
+          main{
+            .wrapper{
+              section{
+                &:nth-child(1){
+                  margin-top: 16rem;
+                }
+              }
+            }
+            }
       }
+
     }
 
 }
