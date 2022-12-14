@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="de" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +7,43 @@
     <link rel="icon" href="src/assets/svg/FTT_favicon.svg" type="image/svg+xml">
     <title>FilmTraumTunnel 📽☁🚂</title>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
 </head>
 <body>
 
-<header>
+<nav class="navbar">
+    <div class="navbar-wrapper wrapper">
+        <div class="navbar-brand">
+            <img src="src/assets/svg/FTT_logo_without_font.svg" alt="Film Traum Tunnel Logo">
+        </div>
+        <div class="navbar-wortmarke">
+            <img src="src/assets/svg/FTT_font.svg" alt="">
+        </div>
+        <div class="navbar-toggler">
+            <lottie-player id="burgerMenu" src="/src/assets/lottie/burger_lottie3.json" 
+            background="transparent"
+            speed="4"
+            ></lottie-player>
+        </div>
+        <div class="navbar-menu">
+            <ul class="navbar-list">
+
+                <li class="navbar-item"><a href="" class="navbar-link headline f-light active">Home</a></li>
+                <li class="navbar-item"><a href="" class="navbar-link headline f-light">Über&nbspuns</a></li>
+                <li class="navbar-item"><a href="" class="navbar-link headline f-light">Kosten</a></li>
+                <li class="navbar-item"><a href="" class="navbar-link headline f-light">Verleih</a></li>
+                <li class="navbar-item"><a href="" class="navbar-link headline f-light">Filme</a></li>
+
+                <button class="navbar-login light">Anmelden</button>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- <header>
     <div class="wrapper">
         <section class="section--nav desktop">
             <img class="nav--logo" src="/src/assets/svg/FTT_logo_without_font.svg" alt="">
@@ -79,35 +112,52 @@
     
         </section>
     </div>
-</header>
+</header> -->
 <main>
 <div class="wrapper">
-    <section class="section--intro">
-        <div class="intro--container">
-            <div class="intro--container-slide">
-                <div class="slide--content">
-                    <div class="slide-content--headline">
-                        <h2>Les Vampires</h2>
-                        <h3 class="text">Louis Feuillade</h3>
-                    </div>
-                    <div class="slide-content--description">
-                        <p class="headline">Les Vampires 1915/16</p>
-                        <p>Die Vampire (Originaltitel: Les Vampires) ist ein zehnteiliges französisches Stummfilm-Serial
-                            von Louis Feuillade aus den Jahren 1915/16 über eine Verbrecherbande, die sich selbst als
-                            "die Vampire" bezeichnet und hauptsächlich in Paris, aber auch in der näheren Umgebung ihr
-                            Unwesen treibt. Ihr Gegenspieler ist der Journalist Philippe Guérande, unterstützt vom
-                            abtrünnigen Vampir Oscar Mazamette.</p>
-                        <button class="dark f-light">Jetzt anschauen</button>
-                    </div>
-                    <img src="src/assets/img/lesVampires_1.jpg" alt="">
-                    <img src="src/assets/img/lesVampires_3.jpg" alt="">
-                    <img src="src/assets/img/lesVampires_4.jpg" alt="">
-                </div>
-               
-                    
-                </div>
+    <section class="section--intro swiper">
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="intro--container swiper-wrapper">
+              <!-- Slides -->
+                <!-- Slide 1 -->
+              <div class="intro--container-slide swiper-slide slide-one">
+                     <div class="slide--content">
+                        <div class="slide-content--text f-light">
+                            <h2>Les Vampires</h2>
+                            <h3 class="text">Louis Feuillade</h3>
+                            <p>Die Vampire (Originaltitel: Les Vampires) ist ein zehnteiliges französisches Stummfilm-Serial
+                                von Louis Feuillade aus den Jahren 1915/16 über eine Verbrecherbande, die sich selbst als
+                                "die Vampire" bezeichnet und hauptsächlich in Paris, aber auch in der näheren Umgebung ihr
+                                Unwesen treibt. Ihr Gegenspieler ist der Journalist Philippe Guérande, unterstützt vom
+                                abtrünnigen Vampir Oscar Mazamette.</p>
+                            <button class="dark f-light">Jetzt anschauen</button>
+                        </div>
+                     </div>
             </div>
-
+            <div class="intro--container-slide swiper-slide slide-two">
+                <div class="slide--content">
+                    <div class="slide-content--text f-light">
+                        <h2>Roma, città apperta</h2>
+                        <h3 class="text">Roberto Rossellini</h3>
+                        <p>Rom, offene Stadt (Originaltitel: Roma città aperta) ist ein italienischer Spielfilm von Roberto Rossellini aus dem Jahr 1945. Er wurde noch während des Krieges vorbereitet und ist ein Beispiel des italienischen Neorealismus.</p>
+                        <button class="dark f-light">Jetzt anschauen</button>
+                    </div>        
+                </div>           
+            </div> 
+            <div class="intro--container-slide swiper-slide slide-three">
+                <div class="slide--content">
+                    <div class="slide-content--text f-light">
+                        <h2>Dial M for Murder
+                        </h2>
+                        <h3 class="text">Alfred Hitchcock</h3>
+                        <p>Bei Anruf Mord (Originaltitel: Dial M for Murder) ist ein US-amerikanischer Thriller von Alfred Hitchcock aus dem Jahr 1954. Das Drehbuch schrieb Frederick Knott, der mit dem gleichnamigen Broadway-Stück zuvor große Erfolge gefeiert hatte. Wie bei Hitchcocks Filmen Das Rettungsboot, Cocktail für eine Leiche und Das Fenster zum Hof wurde ein Konzentrat der Bühnenversion auf die Filmleinwand übertragen. Bis auf wenige Ausnahmen spielt die Handlung in einem einzigen Apartment.</p>
+                        <button class="dark f-light">Jetzt anschauen</button>
+                    </div>        
+                </div>           
+            </div>    
+            </div>
+          </div>
     </section>
         <section class="section--free-trial">
             <div class="free-trial--content">
@@ -237,17 +287,9 @@
                     debitis inventore, illo molestiae quae magni.</p>
                 <button class="dark"><span class="headline f-light">Jetzt Anmelden</span></button>
             </div>
-        </section>
-        <section class="section--about-info">
-          <div class="slide--container">
-            <div class="slide--content">
-                <h2 class="f-light">Was steckt hinter dem FilmTraumTunnel?</h2>
-                <div>
-                    <img src="/src/assets/img/FTT_moodImg.png" alt="">
-                    <p class="f-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum sint eos harum qui cumque hic maiores vitae cum, deserunt sunt, quasi culpa veniam necessitatibus ab nihil nulla praesentium aut consectetur aliquam doloribus quaerat! Culpa excepturi quos amet incidunt eos officia, repudiandae magnam similique necessitatibus quae nulla vero est ipsa laboriosam possimus commodi minima. Labore architecto voluptatem a commodi illum repellendus possimus sed animi iusto? Deleniti consequuntur labore fuga repellendus commodi corporis ducimus impedit libero, eveniet voluptates deserunt, illum aliquam saepe.</p>
-                </div>
+            <div class="streaming-info--background">
+                <img src="src/assets/svg/streaming-info_bg-svg.svg" alt="">
             </div>
-          </div>
         </section>
     </div>
 </div>
@@ -355,7 +397,7 @@
 
 
 </body>
-<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
 <script src="dist/js/app.js"></script>
 </html>

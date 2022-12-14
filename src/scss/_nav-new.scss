@@ -1,0 +1,117 @@
+.navbar {
+    --navbar-height: 200px;
+    position: fixed;
+    top: 0;
+    left: var(--left);
+    z-index: 999;
+    height: var(--navbar-height);
+    &-wrapper {
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+
+        > * {
+            flex: 0 0 auto;
+        }
+    }
+
+    &-brand {
+        width: fit-content !important;
+        height: 100%;
+        img {
+            height: 100%;
+        }
+    }
+
+    &-wortmarke, &-toggler {
+        display: none;
+    }
+
+    &-wortmarke {
+        width: 50% !important;
+    }
+
+    &-toggler {
+        width: 50px !important;
+        background-color: black;
+        border-radius: 50%;
+    }
+
+
+    &-menu {
+        width: fit-content !important;
+        @media only screen and (min-width: 801px) {
+            padding-top: 4rem;
+        }
+    }
+
+    &-list {
+        display: flex;
+        align-items: center;
+        gap: 3.5rem;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    &-login {
+        box-shadow: 0 0 15px black;
+    }
+
+    &-link {
+        font-size: clamp(1.5rem, 3.5rem, 5rem);
+        text-shadow: 0 0 15px black;
+
+        &.active {
+            color: var(--ftt-secondary);
+            border-bottom: .2rem solid var(--ftt-secondary);
+            text-shadow: 0 0 30px var(--ftt-primary), 0 0 15px rgba(0, 0, 0, 0.7);
+        }
+
+        &:hover {
+            color: var(--ftt-primary);
+            border-bottom: .2rem solid var(--ftt-primary);
+        }
+    }
+
+    @media only screen and (max-width: 800px) {
+        --navbar-height: 100px;
+        top: 2rem;
+        
+        &-wrapper {
+            align-items: center;
+            isolation: isolate;
+        }
+
+        &-brand img {
+            border-radius: 50%;
+        }
+        
+        &-wortmarke, &-toggler {
+            display: block;
+        }
+
+        &-list {
+            flex-direction: column;
+            padding-top: 18rem;
+        }
+
+        &-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 100% !important;
+            height: 0;
+            opacity: 0;
+            visibility: hidden;
+            background-color: var(--ftt-primary);
+            overflow: hidden;
+
+            &.open {
+                height: 100%;
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+}

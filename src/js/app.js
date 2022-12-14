@@ -1,25 +1,14 @@
         // init Swiper:
-    const swiper = new Swiper ('.swiper', {
-        // Optional parameters
-        loop: true,
-        grabCursor: true,
-        autoplay: {
-            delay: 4000,
-            disableOnInteraction: true,
-          },
-      
-        // If we need pagination
-/*        pagination: {
-          el: '.swiper-pagination',
-        },*/
-      
-        // Navigation arrows
-        navigation: {
-          nextEl: '.button-next',
-          prevEl: '.button-prev',
-        },
-    
-      });
+        const swiper = new Swiper('.swiper', {
+          // Optional parameters
+          loop: true,
+          grabCursor: true,
+          speed: 800,
+          // autoplay: {
+          //   delay: 2500,
+          // },
+          pauseOnMouseEnter: true,
+        });
 
 //title change
 
@@ -53,15 +42,26 @@ LottieInteractivity.create({
 });
 
 // nav
-const burgerMenu = document.querySelector("#burgerMenu");
+const burgerMenu = document.querySelector(".navbar-toggler");
 
 burgerMenu.addEventListener("click", function(){
-  let navOpen = document.querySelector('.section--nav.mobil');
-  navOpen.classList.toggle('nav-is-open')
+  let navOpen = document.querySelector('.navbar-menu');
+  navOpen.classList.toggle('open')
 
 });
 
 
   
-   
-  
+let navbar = document.querySelector('.navbar');
+let navbarWidth = navbar.offsetWidth;
+let docWidth = document.documentElement.clientWidth;
+let left = (docWidth - navbarWidth) * .5;
+
+navbar.style.setProperty('--left', left + "px");
+
+document.addEventListener('resize', () => {
+  navbarWidth = navbar.offsetWidth;
+  docWidth = document.offsetWidth;
+  left = (docWidth - navbarWidth) * .5;
+  navbar.style.setProperty('--left', navbarWidth * .5 + "px");
+})

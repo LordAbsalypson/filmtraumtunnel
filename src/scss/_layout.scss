@@ -23,6 +23,17 @@ html {
         }
       }
     }
+    main{
+
+      .wrapper{
+        section{
+          margin: 8rem 0;
+          &:nth-child(1){
+            // margin-top: 20rem;
+          }
+        }
+      }
+    }
     footer{
       
     }
