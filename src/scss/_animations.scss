@@ -1,0 +1,24 @@
+
+          @keyframes pulsatingLogo {
+            0% {
+              box-shadow: 0 0 10px var(--ftt-primary), 0 0 15px black;
+            }
+            50% {
+              box-shadow: 0 0 50px var(--ftt-primary), 0 0 15px black;
+            }
+            
+            100% {
+              box-shadow: 0 0 10px var(--ftt-primary), 0 0 15px black;
+            }}
+            @keyframes fadeIn {
+              from{
+                background: transparent;
+                height: 0;
+                opacity: 0;
+              }
+              to {
+                opacity: 1;
+                height: 100%;
+                background: var(--ftt-primary);
+              }
+            }
