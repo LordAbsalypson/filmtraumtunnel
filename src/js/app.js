@@ -4,9 +4,9 @@
           loop: true,
           grabCursor: true,
           speed: 800,
-          // autoplay: {
-          //   delay: 2500,
-          // },
+          autoplay: {
+            delay: 2500,
+          },
           pauseOnMouseEnter: true,
         });
 
@@ -60,12 +60,14 @@ let left = (docWidth - navbarWidth) * .5;
 
 navbar.style.setProperty('--left', left + "px");
 
-document.addEventListener('resize', () => {
+function updateNavbarLeft () {
   navbarWidth = navbar.offsetWidth;
-  docWidth = document.offsetWidth;
+  docWidth = document.documentElement.clientWidth;
   left = (docWidth - navbarWidth) * .5;
-  navbar.style.setProperty('--left', navbarWidth * .5 + "px");
-})
+  navbar.style.setProperty('--left', left + "px");
+}
+
+window.onresize = updateNavbarLeft;
 
 // nav hide on scroll
 var lastScrollTop = window.pageYOffset; // This Varibale will store the top position

@@ -13,6 +13,7 @@ body {
 
   &.nav-open {
     position: fixed;
+    width: 100%;
     overflow: hidden;
   }
 }
@@ -259,6 +260,7 @@ header {
       .preview--img {
         border: solid var(--ftt-secondary) 1rem;
         position: relative;
+        aspect-ratio: 1 / 1.5;
 
         img {
           object-fit: cover;
@@ -319,6 +321,9 @@ header {
     }
   }
   @media only screen and (max-width:800px){
+    .preview--text{
+      text-align: center;
+    }
     .selection--cta{
       display: grid;
       margin: 2rem auto 0;
@@ -416,14 +421,17 @@ footer {
 
   .footer--col-1 {
     display: grid;
-    gap: 1rem;
-
+    // gap: 1rem;
+    ul{
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      list-style: none;
+      margin-bottom: 2rem;
+    }
     a {
       font-size: 1.5rem;
-      &:before {
-        content: "* ";
-
-      }
     }
   }
   .footer--col-2{
@@ -487,6 +495,7 @@ footer {
     .footer-top{
      
       .footer--content{
+        justify-items: center;
         padding: 5% 20% 2% 20%;
         grid-template-columns: 1fr;
         h3{
