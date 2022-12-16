@@ -88,3 +88,6 @@ window.addEventListener('scroll',function(){
   
   lastScrollTop = scrollTop; //New Position Stored
 });
+
+//play video 
+document.getElementById('movingPoster').play();

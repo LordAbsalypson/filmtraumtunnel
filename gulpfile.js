@@ -6,43 +6,34 @@ const prefix = require('gulp-autoprefixer');
 const minify = require('gulp-clean-css');
 const terser = require('gulp-terser');
 const imagemin = require('gulp-imagemin');
-const imagewebp = require('gulp-webp');
+// const imagewebp = require('gulp-webp');
 var browserSync = require('browser-sync').create();
 
 
 //compile, prefix, and min scss
 function compilescss() {
-  return src('src/scss/main.scss') // change to your source directory
-    .pipe(sass().on('error', sass.logError))
+  return src('src/scss/main.scss') 
     .pipe(prefix('last 2 versions'))
     .pipe(minify())
-    .pipe(dest('dist/css')) // change to your final/public directory
-
+    .pipe(dest('dist/css')) 
     //browser Sync
     .pipe(browserSync.stream());
 };
 // minify js
 function jsmin(){
-    return src('src/js/*.js') // change to your source directory
+    return src('src/js/*.js')
       .pipe(terser())
-      .pipe(dest('dist/js')); // change to your final/public directory
+      .pipe(dest('dist/js'));
   }
 
 //optimize and move images
 function optimizeimg() {
-  return src('src/assets/img/*.{jpg,png}') // change to your source directory
+  return src('src/assets/img/*.{jpg,png}')
     .pipe(imagemin([
-      imagemin.mozjpeg({ quality: 90, progressive: true }),
+      imagemin.mozjpeg({ quality: 100, progressive: true }),
       imagemin.optipng({ optimizationLevel: 2 }),
     ]))
-    .pipe(dest('dist/images')) // change to your final/public directory
-};
-
-//optimize and move images
-function webpImage() {
-  return src('dist/images/*.{jpg,png}') // change to your source directory
-    .pipe(imagewebp())
-    .pipe(dest('dist/images')) // change to your final/public directory
+    .pipe(dest('dist/images'))
 };
 
 
@@ -55,10 +46,10 @@ function watchTask(){
       }
     });
   watch('./*.html').on('change', browserSync.reload);  
-  watch('src/scss/**/*.scss', compilescss); // change to your source directory
-  watch('src/js/*.js', jsmin); // change to your source directory
-  watch('src/assets/img/*', optimizeimg); // change to your source directory
-  watch('dist/images/*.{jpg,png}', webpImage); // change to your source directory
+  watch('src/scss/**/*.scss', compilescss); 
+  watch('src/js/*.js', jsmin); 
+  watch('src/assets/img/*', optimizeimg); 
+  
 
 }
 
@@ -67,6 +58,5 @@ function watchTask(){
 exports.default = series(
   compilescss,
   jsmin,
-  webpImage,
   watchTask
 );
